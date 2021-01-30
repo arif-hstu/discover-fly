@@ -57,6 +57,30 @@ nav ul li a:hover, a.active{
 .booking-form  .input-group{
     margin: 10px 0;
 }
+
+#display-message {
+    display: none;
+    color: black;   
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 50px;
+    text-align: center;
+}
+#display-message h1{
+    font-size: 70px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+}
+#display-message .button-holder{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;;
+}
+#display-message button{   
+    width: 30%;
+}
+
 .f-class{
     display: flex;
     justify-content: space-between;
@@ -89,6 +113,7 @@ nav ul li a:hover, a.active{
     border-radius: 4px;
     margin: 10px 0;
 }
+
 .booking-form .inputs{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -106,16 +131,31 @@ nav ul li a:hover, a.active{
     margin-bottom: 25px;
 }
 
-.btn-plus .btn-minus{
-    display: inline-block;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    color: #3352F2;
-    font-weight: 500;
-    background-color:  #fff;
-    font-size: large;
+.plus-minus-btn {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
 }
+.plus-minus-btn>button {
+    padding: 5px 7px;
+    background-color: #fff;
+    border-style: none;
+    font-size: large;
+    font-weight: bold;
+    color: #3352F2;
+    cursor: pointer;
+}
+
+.plus-minus-btn >button:focus {
+    outline: none;
+}
+.plus-minus-btn >button:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
 .btn-style{
     display: block;
     width: 100%;

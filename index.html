@@ -108,7 +108,7 @@
         </div>
 
         <div id="display-message">
-            <h1>Congratulations!<br> You ready to discover the world now!</h1>
+            <h1>Congratulations!<br> You can discover the world now!</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
                 veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
                 voluptatibus quam</p>
@@ -184,7 +184,7 @@
         // function to display confirmation message
         function contentHide() {
             const subTotalAmount = parseInt(elementSelector('subTotal').innerText);
-            
+
             // hiding booking form if at least one ticket selected
             if (subTotalAmount !== 0) {
                 elementSelector('booking-form').style.display = "none";
@@ -196,7 +196,7 @@
                 mainContent.style.display = 'flex';
                 mainContent.style.marginTop = '10%';
 
-            // showing warning message if no ticket selected
+                // showing warning message if no ticket selected
             } else {
                 elementSelector('warning').style.color = 'red';
             }

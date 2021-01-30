@@ -1,114 +1,138 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
 }
-body{
+
+body {
     font-family: 'Roboto', sans-serif;
-    background:url("images/bg.png");
+    background: url("images/bg.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
 }
-nav{
+
+nav {
     height: 50px;
     width: 100%;
     padding: 20px 0;
 }
-.container{
+
+.container {
     width: 1200px;
     max-width: 85%;
     margin: 0 auto;
 }
-nav ul{
+
+nav ul {
     display: flex;
     justify-content: flex-end;
     margin: 0px 6px;
 }
-nav ul li a{
+
+nav ul li a {
     color: #fff;
     padding: 10px;
     text-transform: uppercase;
 }
-nav ul li a:hover, a.active{
+
+nav ul li a:hover,
+a.active {
     background-color: #3352F2;
     border-radius: 5px;
 }
-.main-content{
+
+.main-content {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 70px;
     align-items: center;
 }
-.booking-form{
+
+.booking-form {
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 25px;
     border-radius: 5px;
     float: left;
 }
-.booking-form h3{
+
+.booking-form h3 {
     margin: 10px 0px;
 }
-.booking-form  .input-group{
+
+.booking-form .input-group {
     margin: 10px 0;
 }
+
 #display-message {
     display: none;
-    color: black;   
+    color: black;
     background-color: #fff;
     border-radius: 20px;
     padding: 50px;
     text-align: center;
 }
-#display-message h1{
+
+#display-message h1 {
     font-size: 70px;
     text-transform: uppercase;
     font-family: 'Bebas Neue', cursive;
     font-weight: 400;
 }
-#display-message .button-holder{
+
+#display-message .button-holder {
     display: flex;
     justify-content: center;
-    margin-top: 3%;;
+    margin-top: 3%;
+    ;
 }
-#display-message button{   
+
+#display-message button {
     width: 30%;
 }
-.f-class{
+
+.f-class {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.inp-width{
+
+.inp-width {
     min-width: 300px;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
+
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
-.plus-minus-btn{
+
+.plus-minus-btn {
     color: #3352F2;
     font-size: 30px;
     padding: 2px;
     margin-top: 10px;
     word-spacing: 20px;
 }
-.booking-form  .calculations{
+
+.booking-form .calculations {
     margin: 10px 0;
 }
-.booking-form  .calculations p{
+
+.booking-form .calculations p {
     font-weight: 500;
     margin-bottom: 10px;
 }
-.booking-form input{
+
+.booking-form input {
     width: 100%;
     display: block;
     padding: 10px;
@@ -118,22 +142,26 @@ input[type=number] {
     border-radius: 4px;
     margin: 10px 0;
 }
-.booking-form .inputs{
+
+.booking-form .inputs {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
-.booking-content{
+
+.booking-content {
     color: #fff;
     width: 80%;
 }
-.booking-content h1{
+
+.booking-content h1 {
     font-size: 70px;
     text-transform: uppercase;
     font-family: 'Bebas Neue', cursive;
     font-weight: 400;
     margin-bottom: 25px;
 }
+
 .plus-minus-btn {
     margin-top: 5%;
     width: 100%;
@@ -141,6 +169,7 @@ input[type=number] {
     justify-content: space-between;
     /* background-color: red; */
 }
+
 .plus-minus-btn>button {
     padding: 5px 7px;
     background-color: #fff;
@@ -150,17 +179,22 @@ input[type=number] {
     color: #3352F2;
     cursor: pointer;
 }
-.plus-minus-btn >button:focus {
+
+.plus-minus-btn>button:focus {
     outline: none;
 }
-.plus-minus-btn >button:hover {
+
+.plus-minus-btn>button:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
-.calculations .amount .right span, .calculations .amount .right span {
+
+.calculations .amount .right span,
+.calculations .amount .right span {
     font-weight: bold;
 }
-.btn-style{
+
+.btn-style {
     display: block;
     width: 100%;
     padding: 10px;
@@ -168,12 +202,14 @@ input[type=number] {
     border: none;
     color: #fff;
     font-weight: bolder;
-    background-color:  #3352F2;
+    background-color: #3352F2;
 }
-.amount{
+
+.amount {
     display: flex;
     justify-content: space-between;
 }
+
 #warning {
     margin: 5px;
     color: white;

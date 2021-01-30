@@ -108,7 +108,7 @@
         </div>
 
         <div id="display-message">
-            <h1>Congratulations!<br> You can discover the world now!</h1>
+            <h1>Congratulations!<br> You ready to discover the world now!</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
                 veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
                 voluptatibus quam</p>
@@ -150,11 +150,11 @@
             // calling function for cost calculation
             priceCalculator();
 
-            // calling function to change the warning text into white if ticket selected
+            // calling function to change the warning text color into white if ticket selected
             elementSelector('warning').style.color = '#fff';
         }
 
-        // calculating the price of tickets
+        // calculating the cost of tickets
         function priceCalculator() {
             // getting input value
             const firstCount = getInputValue('first');
@@ -189,9 +189,9 @@
             if (subTotalAmount !== 0) {
                 elementSelector('booking-form').style.display = "none";
                 elementSelector('booking-content').style.display = "none";
-                elementSelector('display-message').style.display = "block";
 
                 // displaying the confirmation message
+                elementSelector('display-message').style.display = "block";
                 const mainContent = elementSelector('main-content');
                 mainContent.style.display = 'flex';
                 mainContent.style.marginTop = '10%';

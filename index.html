@@ -80,7 +80,7 @@
                             <p>Subtotal</p>
                         </div>
                         <div class="right">
-                            <p>$<span id="subtotal">0</span></p>
+                            <p>$<span id="subTotal">0</span></p>
                         </div>
                     </div>
 
@@ -128,17 +128,19 @@
     </main>
 
     <script>
+        // handling ticket counting value
         function getInputValue(typeOfTicket) {
             const ticketInput = document.getElementById(typeOfTicket + '-count');
             const ticketCount = parseInt(ticketInput.value);
             return ticketCount;
         }
 
+        // handling ticket change
         function handleTicketChange(typeOfTicket, isIncrease) {
-
             const ticketCount = getInputValue(typeOfTicket);
-
             let ticketNewCount = ticketCount;
+
+            // checking if ticket count increases or decreases
             if (isIncrease == true) {
                 ticketNewCount = ticketCount + 1;
             }
@@ -147,74 +149,60 @@
             }
             document.getElementById(typeOfTicket + '-count').value = ticketNewCount;
 
+            // calling function for cost calculation
             priceCalculator();
+            
+            // calling function to 
+            elementSelector('warning').style.color = '#fff';
         }
 
-
+        // calculating the price of tickets
         function priceCalculator() {
+            // getting input value
             const firstCount = getInputValue('first');
             const economyCount = getInputValue('economy');
 
-            subTotalAmount = parseInt(document.getElementById('subtotal').innerText);
+            // getting subtotal amount
+            let subTotalAmount = parseInt(document.getElementById('subTotal').innerText);
 
+            // displaying subtotal amount
             subTotalAmount = firstCount * 150 + economyCount * 100;
-            document.getElementById('subtotal').innerText = subTotalAmount;
+            document.getElementById('subTotal').innerText = subTotalAmount;
 
-
+            // displaying tax amount
             const taxAmount = subTotalAmount * 0.1;
             document.getElementById('tax').innerText = taxAmount;
 
+            // displaying total amount
             document.getElementById('total').innerText = subTotalAmount + taxAmount;
         }
 
+        // selecting html element
         function elementSelector(element) {
             const selectedElement = document.getElementById(element);
             return selectedElement;
         }
 
+        // function to display confirmation message
         function contentHide() {
-            const subTotalAmount = parseInt(elementSelector('subtotal').innerText);
+            const subTotalAmount = parseInt(elementSelector('subTotal').innerText);
+            
+            // checking if at least one ticket is selected
             if (subTotalAmount !== 0) {
                 elementSelector('booking-form').style.display = "none";
                 elementSelector('booking-content').style.display = "none";
                 elementSelector('display-message').style.display = "block";
 
+                // displaying the confirmation message
                 const mainContent = elementSelector('main-content');
                 mainContent.style.display = 'flex';
                 mainContent.style.marginTop = '10%';
+
+            // showing warning message
             } else {
-                elementSelector('warning').style.display = 'block';
+                elementSelector('warning').style.color = 'red';
             }
         }
-        // function ticketCounter(typeOfTicket) {
-        //     const button = document.getElementById(typeOfTicket + '-button-plus');
-        //     button.addEventListener('click', function () {
-        //         let inputValue = parseInt(document.getElementById(typeOfTicket + '-input').value);
-        //         inputValue = inputValue + 1;
-        //         document.getElementById(typeOfTicket + '-input').value = inputValue;
-        //         priceCalculator();
-        //     })
-        // }
-
-        // function priceCalculator() {
-        //     let firstValue = parseInt(document.getElementById('first-input').value);
-        //     let economyValue = parseInt(document.getElementById('economy-input').value);
-
-        //     let subTotalAmount = parseInt(document.getElementById('subtotal').innerText);
-
-        //     subTotalAmount = firstValue * 150 + economyValue * 100;
-        //     document.getElementById('subtotal').innerText = subTotalAmount;
-
-        //     const tax = document.getElementById('tax');
-        //     let taxAmount = subTotalAmount * .1;
-        //     tax.innerText = taxAmount;
-
-        //     const total = document.getElementById('total');
-        //     total.innerText = subTotalAmount + taxAmount;
-        // }
-
-        // ticketCounter('first');
-        // ticketCounter('economy');
     </script>
 </body>
 

@@ -187,7 +187,6 @@ input[type=number] {
 }
 
 #warning {
-    display: none;
     margin: 5px;
-    color: red;
+    color: white;
 }
